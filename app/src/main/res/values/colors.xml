@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0F4C81</color>
+    <color name="colorPrimaryDark">#0F4C81</color>
+    <color name="colorAccent">#7884F8</color>
+    <color name="colorMainSSMSPurple">#606EB2</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grey">#EEEEEE</color>
+    <color name="grey_default">#707070</color>
+
+    <color name="Bluebg1">#015C4B</color>
+    <color name="Bluebg2">#05383C</color>
+    <color name="White">#FFFF</color>
+    <color name="Black">#FF030000</color>
+    <color name="whitetrans">#73FFFFFF</color>
+
+    <!-- Lsu color -->
+    <color name="def">#FF5722</color>
+    <color name="low">#FFC107</color>
+    <color name="opt">#3F51B5</color>
+    <color name="high">#8BC34A</color>
+    <color name="exc">#009688</color>
+
+    <color name="green_basiccolor">#32CD32</color>
+    <color name="blue_basiccolor">#5F9EA0</color>
+
+    <!-- Border color -->
+    <color name="border_darkgreen">#015C4B</color>
+    <color name="border_darkblue">#26236E</color>
+    <color name="border_yellow">#6E6923</color>
+    <color name="border_green">#236E34</color>
+    <color name="border_red">#6E2323</color>
+    <color name="border_blue">#23536E</color>
+    <color name="border_purple">#6E2369</color>
+    <color name="border_grey">#708090</color>
+    <color name="border_lightgreen">#5F9EA0</color>
+    <color name="border_darkgreen2">#2F4F4F</color>
+    <color name="border_chartreuse">#808000</color>
+    <color name="border_darkyellow">#333300</color>
+
+    <color name="border_lightpurple">#CE93D8</color>
+    <color name="border_lightblueA">#B39DDB</color>
+    <color name="border_lightblueC">#9FA8DA</color>
+    <color name="border_lightblue">#90CAF9</color>
+    <color name="border_lightbluesky">#81D4FA</color>
+    <color name="border_lightblueB">#80DEEA</color>
+    <color name="border_lightgreenB">#80CBC4</color>
+    <color name="border_lightgreenC">#A5D6A7</color>
+    <color name="border_lightgreenD">#C5E1A5</color>
+    <color name="border_lightyellow">#E6EE9C</color>
+    <color name="border_lightyellowB">#FFF59D</color>
+    <color name="border_lightyellowC">#FFE082</color>
+
+    <!-- Chart(Grafik) color -->
+    <color name="chart_blue1">#4FC3F7</color>
+    <color name="chart_blue2">#03A9F4</color>
+    <color name="chart_blue3">#039BE5</color>
+    <color name="chart_blue4">#0277BD</color>
+    <color name="chart_budget">#304FFE</color>
+
+    <color name="chart_bluedark1">#7986CB</color>
+    <color name="chart_bluedark2">#5C6BC0</color>
+    <color name="chart_bluedark3">#3F51B5</color>
+    <color name="chart_bluedark4">#3949AB</color>
+
+    <color name="chart_lighttoscagreen1">#4DD0E1</color>
+    <color name="chart_lighttoscagreen2">#00BCD4</color>
+    <color name="chart_lighttoscagreen3">#00ACC1</color>
+    <color name="chart_lighttoscagreen4">#0097A7</color>
+
+    <color name="chart_toscagreen1">#4DB6AC</color>
+    <color name="chart_toscagreen2">#26A69A</color>
+    <color name="chart_toscagreen3">#009688</color>
+    <color name="chart_toscagreen4">#00796B</color>
+
+    <color name="chart_green1">#CCFF90</color>
+    <color name="chart_green2">#B2FF59</color>
+    <color name="chart_green3">#76FF03</color>
+    <color name="chart_green4">#64DD17</color>
+
+    <color name="chart_lightgreen1">#B9F6CA</color>
+    <color name="chart_lightgreen2">#69F0AE</color>
+    <color name="chart_lightgreen3">#00E676</color>
+    <color name="chart_lightgreen4">#00C853</color>
+
+    <color name="chart_darkblue2">#0288D1</color>
+    <color name="chart_darkblue4">#303F9F</color>
+
+    <color name="chart_yellow1">#FFF59D</color>
+    <color name="chart_yellow2">#FFEE58</color>
+    <color name="chart_yellow3">#FDD835</color>
+    <color name="chart_yellow4">#FBC02D</color>
+
+    <color name="chart_darkyellow1">#FFD54F</color>
+    <color name="chart_darkyellow2">#FFCA28</color>
+    <color name="chart_darkyellow3">#FFB300</color>
+    <color name="chart_darkyellow4">#FFA000</color>
+
+    <color name="chart_darkorange1">#FF8A65</color>
+    <color name="chart_darkorange2">#FF7043</color>
+    <color name="chart_darkorange3">#FF5722</color>
+    <color name="chart_darkorange4">#E64A19</color>
+
+    <color name="chart_red1">#E57373</color>
+    <color name="chart_red2">#EF5350</color>
+    <color name="chart_red3">#F44336</color>
+    <color name="chart_red4">#D32F2F</color>
+
+    <color name="chart_darkpink1">#F06292</color>
+    <color name="chart_darkpink2">#EC407A</color>
+    <color name="chart_darkpink3">#E91E63</color>
+    <color name="chart_darkpink4">#D81B60</color>
+
+    <color name="chart_pink1">#FF80AB</color>
+    <color name="chart_pink2">#FF4081</color>
+    <color name="chart_pink3">#F50057</color>
+    <color name="chart_pink4">#C51162</color>
+
+    <color name="chart_purple1">#BA68C8</color>
+    <color name="chart_purple2">#AB47BC</color>
+    <color name="chart_purple3">#9C27B0</color>
+    <color name="chart_purple4">#7B1FA2</color>
+
+    <color name="chart_bluepurple1">#9575CD</color>
+    <color name="chart_bluepurple2">#7E57C2</color>
+    <color name="chart_bluepurple3">#673AB7</color>
+    <color name="chart_bluepurple4">#512DA8</color>
+
+    <color name="colorGreen_A400">#00E676</color>
+    <color name="colorGreen_TransparanCard">#001B5E20</color>
+    <color name="colorRed_A400">#FF1744</color>
+    <color name="colorPurple_M700">#303F9F</color>
+    <color name="ssmsPantone">#6CC24A</color>
+    <color name="themeBlue">#7884F8</color>
+    <color name="PanenTBS">#02A11C</color>
+    <color name="colorLightGray">#D8D8D8</color>
+    <color name="covidPrimary">#0F4C81</color>
+
+</resources>

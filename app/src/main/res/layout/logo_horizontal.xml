@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/covid"
+        android:id="@+id/ivLogoHorizontal"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvLogo1Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoeui"
+        android:text="Covid"
+        android:textSize="35sp"
+        android:textColor="@color/covidPrimary"
+        android:gravity="center"
+        android:layout_gravity="center"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvLogo2Horizontal"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/seguisb"
+        android:text="Tracker"
+        android:textSize="35sp"
+        android:textStyle="italic"
+        android:textColor="@color/covidPrimary"
+        android:layout_gravity="left|center"
+        android:gravity="left|center"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>
