@@ -1,44 +1,58 @@
 package com.srsssms.covidtracker
 
-import android.annotation.SuppressLint
-import android.app.NotificationManager
-import android.app.PendingIntent
-import android.content.Context
 import android.content.Intent
-import android.media.RingtoneManager
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
-import androidx.core.app.NotificationCompat
+import android.widget.Toast
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
-@SuppressLint("MissingFirebaseInstanceTokenRefresh")
 class MyFirebaseMessagingService : FirebaseMessagingService() {
-    override fun onMessageReceived(remoteMessage: RemoteMessage) {
-        Log.d("debugnotif", "LOL")
-        generateNotification(remoteMessage.notification!!.body, remoteMessage.notification!!.title)
+    private var broadcaster: LocalBroadcastManager? = null
+    private val processLater = false
+
+    override fun onCreate() {
+        broadcaster = LocalBroadcastManager.getInstance(this)
     }
 
-    private fun generateNotification(body: String?, title: String?) {
-        val intent = Intent(this, ActivityMenu::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        val pendingIntent = PendingIntent.getActivity(this, 0, intent,
-            PendingIntent.FLAG_ONE_SHOT)
-        val soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
-        val notificationBuilder = NotificationCompat.Builder(this)
-            .setSmallIcon(R.mipmap.ic_launcher)
-            .setContentTitle(title)
-            .setContentText(body)
-            .setAutoCancel(true)
-            .setSound(soundUri)
-            .setContentIntent(pendingIntent)
-        val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        if (NOTIFICATION_ID > 1073741824) {
-            NOTIFICATION_ID = 0
+    override fun onNewToken(token: String) {
+        Log.d(TAG, "Refreshed token: $token")
+
+        getSharedPreferences("_", MODE_PRIVATE).edit().putString("fcm_token", token).apply()
+    }
+
+    override fun onMessageReceived(remoteMessage: RemoteMessage) {
+        super.onMessageReceived(remoteMessage)
+
+        Log.d(TAG, "From: ${remoteMessage.from}")
+
+
+        if (/* Check if data needs to be processed by long running job */ processLater) {
+            //scheduleJob()
+            Log.d(TAG, "executing schedule job")
+        } else {
+            // Handle message within 10 seconds
+            handleNow(remoteMessage)
         }
-        notificationManager.notify(NOTIFICATION_ID++, notificationBuilder.build())
+    }
+
+    private fun handleNow(remoteMessage: RemoteMessage) {
+        val handler = Handler(Looper.getMainLooper())
+
+        handler.post {
+            Toast.makeText(baseContext, getString(R.string.handle_notification_now), Toast.LENGTH_LONG).show()
+
+            remoteMessage.notification?.let {
+                val intent = Intent("MyData")
+                intent.putExtra("message", remoteMessage.data["text"])
+                broadcaster?.sendBroadcast(intent)
+            }
+        }
     }
 
     companion object {
-        var NOTIFICATION_ID = 1
+        private const val TAG = "MyFirebaseMessagingS"
     }
 }

@@ -15,4 +15,5 @@
     <string name="settings">Settings</string>
     <string name="deskripsiCheck">Sedang mengecek gawai anda..</string>
     <string name="silahkan_mendaftar">Silahkan mendaftar..</string>
+    <string name="handle_notification_now">We are going to do something with our notification right now!</string>
 </resources>
